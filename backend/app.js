@@ -7,9 +7,14 @@ import userRouter from "./routes/user-routes";
 const mongoose = require("mongoose");
 const dotenv = require("dotnev");
 const app = express();
-app.use("/user",userRouter)
+
 
 //middlewares
+app.use(express.json());
+app.use("/user",userRouter);
+
+
+
 
 
 mongoose
